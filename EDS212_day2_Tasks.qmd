@@ -31,10 +31,9 @@ ex1 <- expression(x^2)
 der_ex1_x <- D(expr = ex1, name = "x")
 der_ex1_x
 
- 
-der_ex1_x_fun <- function(x) {
-  2 * x
-}
+# Evaluate the expression
+x <- 3
+eval(der_ex1_x)
 
 
 ```
