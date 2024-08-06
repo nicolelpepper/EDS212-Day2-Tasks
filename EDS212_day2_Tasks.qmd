@@ -10,13 +10,15 @@ editor_options:
 # Load Libraries
 library(tidyverse)
 library(palmerpenguins)
+data(package='palmerpenguins')
+penguins <- penguins
 ```
 
 ```{r}
 # Connect with your Git
-usethis::use_git()
+#usethis::use_git()
 # Connect with your GitHub
-usethis::use_github()
+#usethis::use_github()
 ```
 
 #Finding derivaties using R
@@ -34,6 +36,30 @@ der_ex1_x
 # Evaluate the expression
 x <- 3
 eval(der_ex1_x)
+
+# Create an expression 
+ex2 <- expression(2 * (3*a + 2)^4 - 5)
+ex2
+
+# Take the derivative
+der_ex2_a <- D(expr = ex2, name = "a")
+der_ex2_a
+
+# Evaluate the expression
+a <- 1.2
+eval(der_ex2_a)
+```
+
+#Now onto Penguins
+
+```{r}
+#create a plot in ggplot
+
+ggplot(data = penguins, aes (x = bill_length_mm, y = bill_depth_mm)) + geom_point(aes(color = species)) + labs( title = "Penguin bills", x = "Bill Length (mm)", y = "Bill Depth (mm)")
+
+
+
+ggplot(data = penguins, aes (x = species, y = flipper_length_mm)) + geom_jitter(aes(color = species)) + labs( title = "Penguin flippers", x = "Penguin Species", y = "Flipper Length (mm)")
 
 
 ```
