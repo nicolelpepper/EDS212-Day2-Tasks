@@ -2,12 +2,40 @@
 title: "EDS 212 Day 2 Tasks"
 author: "Nicole Pepper"
 format: html
-
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r}
 # Load Libraries
 library(tidyverse)
 library(palmerpenguins)
+```
+
+```{r}
+# Connect with your Git
+usethis::use_git()
+# Connect with your GitHub
+usethis::use_github()
+```
+
+#Finding derivaties using R
+
+```{r}
+# Create an expression
+
+ex1 <- expression(x^2)
+
+# Take the derivative
+
+der_ex1_x <- D(expr = ex1, name = "x")
+der_ex1_x
+
+ 
+der_ex1_x_fun <- function(x) {
+  2 * x
+}
+
+
 ```
 
