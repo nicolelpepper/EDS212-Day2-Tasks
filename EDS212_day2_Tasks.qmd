@@ -1,0 +1,13 @@
+---
+title: "EDS 212 Day 2 Tasks"
+author: "Nicole Pepper"
+format: html
+
+---
+
+```{r}
+# Load Libraries
+library(tidyverse)
+library(palmerpenguins)
+```
+
